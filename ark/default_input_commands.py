@@ -77,7 +77,7 @@ class DefaultInputCommands(object):
     def _cmd_restart(text):
         if text.lower().strip() == 'restart now':
             out('Issuing IMMEDIDATE server restart')
-            Rcon.broadcast('Restarting the server!', Rcon.response_callback_response_only)
+            Rcon.broadcast('Restarting the server!', None)
             ServerControl.restart_server()
             return
 
