@@ -294,3 +294,9 @@ class Db(DbBase):
         if result:
             return result
         return None
+
+    @classmethod
+    def find_quote(text):
+        result=None
+        result=Db.session.query(Chat).filter_by(id=text).first()
+        return result
